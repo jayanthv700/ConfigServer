@@ -1,6 +1,4 @@
-# spring:
-#   application:
-#     name: Order-Service-With-Kafka
+spring:
   datasource:
     url: jdbc:mysql://localhost:3306/orderdb_dev
     username: root
