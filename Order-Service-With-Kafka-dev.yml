@@ -1,23 +1,19 @@
 # spring:
 #   application:
 #     name: Order-Service-With-Kafka
-
   datasource:
-    url: jdbc:mysql://localhost:3306/orderdb_dev   # changed from mysql → localhost
+    url: jdbc:mysql://localhost:3306/orderdb_dev
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL8Dialect
-
   zipkin:
-    base-url: http://localhost:9411   # changed from host.docker.internal
+    base-url: http://localhost:9411
     enabled: true
-
   sleuth:
     sampler:
       probability: 1.0
@@ -31,16 +27,16 @@
 
 server:
   port: 8083
-  
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka   # changed from eurekaservice
+      defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-    prefer-ip-address: true 
+    prefer-ip-address: true
+
 feign:
   hystrix:
     enabled: true
