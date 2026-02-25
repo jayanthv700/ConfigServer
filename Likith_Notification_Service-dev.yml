@@ -12,7 +12,7 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
         spring.json.use.type.headers: false
-        spring.json.value.default.type: com.notification.model
+        spring.json.value.default.type: com.notification.model.OrderEvent
 
 eureka:
   client:
