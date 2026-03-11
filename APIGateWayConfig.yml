@@ -15,12 +15,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: userservice
-          uri: lb://FeignUserService
+        - id: OrderService
+          uri: lb://event-order-service
           predicates:
-            - Path=/api/users/**
+            - Path=/order/**
 
-        - id: orderservice
-          uri: lb://FeignOrderService
+        - id: NoificationService
+          uri: lb://event-product-service
           predicates:
-            - Path=/api/orders/**
+            - Path=/product/**
