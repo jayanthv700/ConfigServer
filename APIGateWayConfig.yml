@@ -5,6 +5,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
 
 management:
   tracing:
@@ -20,7 +23,7 @@ spring:
           predicates:
             - Path=/order/**
 
-        - id: NoificationService
+        - id: NotificationService
           uri: lb://event-product-service
           predicates:
             - Path=/product/**
